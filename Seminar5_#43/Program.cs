@@ -16,18 +16,11 @@ bool InputDannyh(string text, out double? val1, out double? val2)
         {
             return InputDannyh(text, out val1, out val2);
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
-    else
-    {
-        val1 = array[0];
-        val2 = array[1];
-        return true;
-    }
-    return false;
+    val1 = array[0];
+    val2 = array[1];
+    return true;
 }
 
 //***********************
@@ -35,9 +28,6 @@ Console.Write("Программа находит точку пересечени
 Console.WriteLine("");
 
 double? k1, k2, b1, b2;
-//k1 = k2 = b1 = b2 = 0;
-//InputDannyh("Введите угловые коэффициенты двух прямых", out k1, out k2);
-//InputDannyh("Введите значения пересечения двух прямых с осью y", out b1, out b2);
 
 if (!InputDannyh("Введите угловые коэффициенты двух прямых", out k1, out k2) || !InputDannyh("Введите значения пересечения двух прямых с осью y", out b1, out b2))
     Console.WriteLine("Расчет прерван из-за отказа ввода данных");
@@ -61,4 +51,3 @@ else
         Console.WriteLine($"Точка пересечения двух прямых ({x};{y})");
     }
 }
-//Dictionary<string, int> perem = new Dictionary<string, int>();
